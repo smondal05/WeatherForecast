@@ -1,0 +1,45 @@
+.dashboard {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.form {
+  color: #37474f;
+}
+.wrapper-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container1 {
+  padding-right: 20px;
+}
+.aboutDrawer {
+  float: right;
+  width: 25%;
+  min-height: 100vh;
+  background-color: yellow;
+}
+.dashboard > h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  letter-spacing: -1px;
+}
+.dashboard > h4 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.dashboard__form > select {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=dashboardPage.css.map */
