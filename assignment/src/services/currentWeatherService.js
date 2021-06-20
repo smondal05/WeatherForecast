@@ -10,5 +10,11 @@ export const currentWeatherDataService = (request) => {
     })
     .then((json) => {
       return json;
+    })
+    .catch((err) => {
+      console.error(
+        "Failed to receive response from CURRENT_WEATHER_API. Error --> ",
+        err
+      );
     });
 };

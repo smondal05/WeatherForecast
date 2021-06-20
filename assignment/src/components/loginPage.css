@@ -2,20 +2,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 60vh;
   align-items: center;
 }
 .login__form {
   display: flex;
   flex-direction: column;
 }
-.login__form > h2 {
+.login__header {
+  display: flex;
   font-size: 35px;
   margin-bottom: 15px;
   padding-bottom: 10px;
   letter-spacing: -1px;
 }
-.login__form > input {
+.login__input {
   min-width: 380px;
   padding: 20px 0;
   padding-left: 15px;
@@ -24,6 +25,8 @@
   border: 1px solid rgba(0, 0, 0, 0.24);
   border-radius: 2px;
   font-size: 15px;
+  display: flex;
+  margin: 0 auto;
 }
 .submit__button {
   padding: 17px 30px;
@@ -32,6 +35,15 @@
   border: none;
   color: white;
   font-size: 14px;
-  border-radius: 3px;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
 }
-/*# sourceMappingURL=loginPage.css.map */
+.general {
+  padding-bottom: 10px;
+}
+.login__valid {
+  color: red;
+  font-size: 10px;
+  font-style: italic;
+}

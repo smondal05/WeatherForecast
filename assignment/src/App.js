@@ -5,8 +5,6 @@ import PrivateRoute from "./privateRoute";
 import LoginPage from "./components/loginPage";
 import DashboardPage from "./components/dashboardPage";
 
-import "./App.less";
-
 const App = () => (
   <BrowserRouter>
     <div>

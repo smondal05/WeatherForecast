@@ -1,45 +1,120 @@
-.dashboard {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+.dashboard__content {
+  box-shadow: 0px -1px 0px 0px #b0bec5;
+  border: 1rem;
 }
-.form {
-  color: #37474f;
+@media (min-width: 768px) {
+  .parent__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 }
-.wrapper-flex {
+.dashboard__loader {
+  margin-left: 46.5%;
+}
+.dashboard__form__loader {
+  height: 100vh;
+}
+.dashboard_response_failure {
+  color: red;
+  font-size: 15px;
+  font-style: italic;
+}
+.container,
+.child_one_container,
+.child_two_container {
+  overflow: hidden;
+  position: relative;
+  width: 35%;
+  box-shadow: 0px 2px 8px 0px #b0bec5;
+  border: 1rem;
+  padding: 25px;
+}
+.child_one_container {
+  margin-bottom: 2rem;
+}
+.child_two_container {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+.container__header {
+  font-size: 17px;
+  margin-left: 34%;
+}
+.container__card {
+  box-shadow: 0px 2px 8px 0px #b0bec5;
+  margin: 10px;
+  padding: 20px;
+  width: 35%;
+}
+.container__card_drawer_open {
+  box-shadow: 0px 2px 8px 0px #b0bec5;
+  margin: 10px;
+  padding: 20px;
+  width: 55%;
+}
+.parent_container_card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  overflow-y: scroll;
+  height: 67.5vh;
 }
-.container1 {
-  padding-right: 20px;
+.parent_container_card::-webkit-scrollbar {
+  width: 8px;
+  background-color: #b0bec5;
+  border-radius: 8px 8px 8px 8px;
 }
-.aboutDrawer {
+.parent_container_card::-webkit-scrollbar-thumb {
+  background-color: #eceff1;
+  border-radius: 8px 8px 8px 8px;
+}
+.dashboard__drawer {
+  position: relative;
   float: right;
   width: 25%;
-  min-height: 100vh;
-  background-color: yellow;
+  box-shadow: 0px 2px 8px 0px #b0bec5;
+  border: 1px solid black;
+  height: 100vh;
+  background-color: #b0bec5;
+  padding: 25px;
 }
-.dashboard > h2 {
-  font-size: 35px;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  letter-spacing: -1px;
+.dashboard__header {
+  font-size: 30px;
+  margin-bottom: 0;
+  display: inline-block;
+  padding-right: 85%;
 }
-.dashboard > h4 {
+.dashboard__form__header {
+  display: inline-block;
+  font-size: 20px;
+}
+.dashboard__form__select__div {
+  padding-left: 10px;
+  display: inline-block;
+}
+.dashboard__form__select {
+  min-height: 35px;
+  border-radius: 3px;
+  border: 2px solid #2196f3;
+  outline: none;
+  padding: 0 10px;
+  width: 100%;
+  cursor: pointer;
+}
+.dashboard__button,
+.dashboard__button__logout {
+  padding: 13px 20px;
+  margin-top: 10px;
+  background: black;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
   margin: 0 auto;
 }
-.dashboard__form > select {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+.dashboard__button__logout {
+  display: inline-block;
+  margin-bottom: 10px;
 }
-.about {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-/*# sourceMappingURL=dashboardPage.css.map */

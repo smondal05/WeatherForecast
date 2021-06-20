@@ -10,5 +10,11 @@ export const monthlyWeatherDataService = (request) => {
     })
     .then((json) => {
       return json;
+    })
+    .catch((err) => {
+      console.error(
+        "Failed to receive response from MONTHLY_WEATHER_API. Error --> ",
+        err
+      );
     });
 };
