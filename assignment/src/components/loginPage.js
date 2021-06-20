@@ -10,7 +10,7 @@ import "./loginPage.css";
 class LoginPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { logInValid: true, loginButtonClicked: false };
+    this.state = { logInValid: false, loginButtonClicked: false };
   }
   onHandleLogin = (event) => {
     event.preventDefault();
@@ -21,6 +21,7 @@ class LoginPage extends Component {
     if (email !== "" && password !== "") {
       const data = { email, password };
       this.props.dispatch(loginUserAction(data));
+      this.setState({ logInValid: true });
     } else {
       this.setState({ logInValid: false });
     }
@@ -32,6 +33,25 @@ class LoginPage extends Component {
 
   render() {
     let isSucces, message;
+
+    // [START] Faking API call to get the token
+    /* OR else comment this block of code and uncomment the LOGIN_API_ENDPOINT in authenticationService.js
+    and run `node server.js` in terminal outside of this assignment folder */
+    if (
+      this.props.location.state.logoutButtonClicked &&
+      this.state.logInValid
+    ) {
+      if (this.props.response.login) {
+        this.props.response.login.response = {
+          success: true,
+          token: "test123",
+          message: "Login Successful.",
+        };
+      }
+    } else {
+      this.props.response.login = [];
+    }
+    // [END] Faking API call to get the token
 
     if (this.props.response.login.hasOwnProperty("response")) {
       isSucces = this.props.response.login.response.success;

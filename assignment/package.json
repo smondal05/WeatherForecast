@@ -1,4 +1,5 @@
 {
+  "homepage": "http://smondal05.github.io/WeatherForecast",
   "name": "assignment",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently --kill-others \"less-watch-compiler --config less-watch-compiler.config.json\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
+    "gh-pages": "^3.2.2",
     "less": "^4.1.1",
     "less-watch-compiler": "^1.15.2"
   }

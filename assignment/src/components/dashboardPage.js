@@ -28,7 +28,7 @@ class DashboardPage extends Component {
 
   handleLogout = () => {
     deleteCookie("token");
-    window.location.reload();
+    this.props.history.push("./login", { logoutButtonClicked: true });
   };
 
   handleAbout = (event) => {
@@ -42,12 +42,12 @@ class DashboardPage extends Component {
 
     if (this.props.response.currentWeather.hasOwnProperty("response")) {
       currentWeatherData = this.props.response.currentWeather.response;
-      console.log("CURRENT Rs --->", currentWeatherData);
+      // console.log("CURRENT Rs --->", currentWeatherData);
     }
 
     if (this.props.response.monthlyWeather.hasOwnProperty("response")) {
       monthlyWeatherData = this.props.response.monthlyWeather.response;
-      console.log("MONTHLY Rs--->", monthlyWeatherData);
+      // console.log("MONTHLY Rs--->", monthlyWeatherData);
     }
 
     if (
